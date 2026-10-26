@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Mutia Azzahra Nur Hakim ✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Background Wallpaper with Smooth Blur */
+        .bg-wallpaper {
+            position: absolute;
+            inset: -4%;
+            width: 108%;
+            height: 108%;
+            background-image: url('WhatsApp Image 2026-10-25 at 01.23.25 (1).jpeg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(14px) brightness(0.65) saturate(1.2);
+            transform: scale(1.05);
+            transition: transform 8s ease-out;
+            z-index: 1;
+        }
+
+        .overlay-gradient {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(30, 10, 25, 0.45) 0%, rgba(10, 6, 18, 0.82) 100%);
+            z-index: 2;
+        }
+
+        /* Floating Hearts Particles */
+        .heart-particle {
+            position: absolute;
+            bottom: -30px;
+            color: rgba(244, 114, 182, 0.65);
+            user-select: none;
+            pointer-events: none;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(0.6) rotate(0deg);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.8;
+            }
+            85% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-105vh) scale(1.2) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Pop in modal animation */
+        @keyframes modalBounce {
+            0% { transform: scale(0.7) translateY(20px); opacity: 0; }
+            70% { transform: scale(1.03) translateY(-4px); opacity: 1; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        .animate-modal {
+            animation: modalBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        /* Custom subtle scrollbar */
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 999px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: rgba(244, 114, 182, 0.4);
+            border-radius: 999px;
+        }
+    </style>
+</head>
+<body class="bg-neutral-950 text-white min-h-screen w-screen overflow-hidden select-none flex flex-col justify-center items-center relative">
+
+    <!-- Audio Element -->
+    <audio id="bgMusic" src="Fani Rahmansyah - Typeku (Official Lyrics Video).mp3" loop preload="auto"></audio>
+
+    <!-- Floating Background Particles Container (Active in Page 2) -->
+    <div id="particle-container" class="absolute inset-0 pointer-events-none overflow-hidden z-[4]"></div>
+
+    <!-- HALAMAN 1: LOGIN -->
+    <div id="page-login" class="flex flex-col items-center justify-center h-full w-full absolute inset-0 z-20 p-4 bg-gradient-to-br from-slate-950 via-purple-950/40 to-neutral-950 transition-all duration-700">
+        <div class="relative bg-white/10 p-7 md:p-10 rounded-3xl shadow-[0_15px_45px_rgba(0,0,0,0.6)] backdrop-blur-xl border border-white/15 max-w-md w-full text-center">
+            
+            <!-- Glow Accent -->
+            <div class="absolute -top-12 -left-12 w-32 h-32 bg-pink-500/20 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-12 -right-12 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="w-16 h-16 mx-auto mb-4 bg-pink-500/20 rounded-2xl flex items-center justify-center border border-pink-400/30 text-2xl shadow-inner">
+                🔒
+            </div>
+
+            <h1 class="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-200 to-amber-100">
+                Akses Masuk Rahasia
+            </h1>
+            <p class="text-pink-100/70 mb-7 text-xs md:text-sm font-light leading-relaxed">
+                Pilih tanggal dan kombinasi kode yang paling berharga untuk membuka pesan di dalamnya.
+            </p>
+            
+            <!-- Kode Buttons -->
+            <div class="grid grid-cols-2 gap-3.5">
+                <button onclick="checkCode('210703')" class="py-3.5 px-3 bg-white/5 hover:bg-rose-500/30 border border-white/10 hover:border-pink-400/50 rounded-2xl transition-all duration-300 font-semibold tracking-widest text-slate-200 hover:text-white shadow-md active:scale-95">210703</button>
+                <button onclick="checkCode('130305')" class="py-3.5 px-3 bg-white/5 hover:bg-rose-500/30 border border-white/10 hover:border-pink-400/50 rounded-2xl transition-all duration-300 font-semibold tracking-widest text-slate-200 hover:text-white shadow-md active:scale-95">130305</button>
+                <button onclick="checkCode('190526')" class="py-3.5 px-3 bg-white/5 hover:bg-rose-500/30 border border-white/10 hover:border-pink-400/50 rounded-2xl transition-all duration-300 font-semibold tracking-widest text-slate-200 hover:text-white shadow-md active:scale-95">190526</button>
+                <button onclick="checkCode('190726')" class="py-3.5 px-3 bg-white/5 hover:bg-rose-500/30 border border-white/10 hover:border-pink-400/50 rounded-2xl transition-all duration-300 font-semibold tracking-widest text-slate-200 hover:text-white shadow-md active:scale-95">190726</button>
+                <button onclick="checkCode('210826')" class="py-3.5 px-3 bg-white/5 hover:bg-rose-500/30 border border-white/10 hover:border-pink-400/50 rounded-2xl transition-all duration-300 font-semibold tracking-widest text-slate-200 hover:text-white shadow-md active:scale-95">210826</button>
+                <button onclick="checkCode('081026')" class="py-3.5 px-3 bg-white/5 hover:bg-rose-500/30 border border-white/10 hover:border-pink-400/50 rounded-2xl transition-all duration-300 font-semibold tracking-widest text-slate-200 hover:text-white shadow-md active:scale-95">081026</button>
+            </div>
+            
+            <p class="mt-6 text-[11px] text-slate-400/60 tracking-wider">Hanya ada satu kode yang membuka segalanya 🤍</p>
+        </div>
+    </div>
+
+    <!-- HALAMAN 2: BERANDA -->
+    <div id="page-home" class="hidden relative h-full w-full overflow-hidden flex flex-col items-center justify-center">
+        <!-- Background Blur & Vignette -->
+        <div class="bg-wallpaper"></div>
+        <div class="overlay-gradient"></div>
+
+        <!-- Music Controller Button (Top Right) -->
+        <button id="musicToggleBtn" onclick="toggleAudio()" class="fixed top-5 right-5 z-40 flex items-center gap-2 bg-black/40 hover:bg-black/60 border border-white/20 backdrop-blur-md px-4 py-2 rounded-full text-xs text-pink-200 transition-all shadow-lg active:scale-95">
+            <span id="musicIcon" class="animate-spin text-sm">🎵</span>
+            <span id="musicText">Lagu: Putar</span>
+        </button>
+
+        <!-- Main Content Card -->
+        <div class="relative z-10 w-full max-w-2xl px-4 py-8 h-full max-h-screen flex flex-col justify-center items-center">
+            
+            <div class="w-full bg-slate-950/40 p-6 sm:p-9 md:p-10 rounded-3xl backdrop-blur-2xl border border-pink-400/20 shadow-[0_0_50px_rgba(236,72,153,0.18)] max-h-[85vh] overflow-y-auto custom-scroll text-center flex flex-col items-center">
+                
+                <!-- Little Header Tag -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-500/15 border border-pink-300/30 text-pink-200 text-xs tracking-wider uppercase mb-5 font-semibold">
+                    <span>🌸</span> Special Message for You
+                </div>
+
+                <!-- Recipient Name Title -->
+                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200 mb-6 drop-shadow leading-tight">
+                    Mutia Azzahra Nur Hakim
+                </h1>
+
+                <!-- Heartfelt Letter Content -->
+                <div class="space-y-4 text-slate-200 font-light text-sm sm:text-base md:text-lg leading-relaxed text-center sm:text-justify max-w-xl">
+                    <p>
+                        <span class="font-semibold text-pink-300 font-serif italic text-xl">Terima kasih telah hadir</span> dalam kehidupanku, membawa hangat dan senyum yang tak pernah gagal meluluhkan hari-hariku yang lelah. Kehadiranmu bukan sekadar kebetulan, melainkan anugerah terindah yang selalu aku syukuri di setiap hembusan napas dan detak waktu.
+                    </p>
+                    <p>
+                        Bersamamu, hal-hal sederhana berubah menjadi momen yang begitu berharga. Caramu memandang, tutur katamu yang menenangkan, hingga tawamu yang manis, semuanya menjadi alasan mengapa hatiku selalu menemukan tempat ternyaman untuk pulang.
+                    </p>
+                    <p>
+                        <span class="font-semibold text-rose-300 font-serif italic text-xl">Tetaplah menjadi Mutia</span> yang apa adanya—Mutia yang tulus, ceria, berhati lembut, dan selalu menebarkan kebaikan di mana pun kamu berada. Jangan pernah biarkan dunia yang bising ini mengubah ketulusan indah yang ada dalam dirimu.
+                    </p>
+                    <p class="text-pink-100/90 pt-1">
+                        Aku akan selalu ada di sini, mengagumi setiap langkahmu dan membersamai ceritamu. 
+                    </p>
+                </div>
+
+                <!-- Footer Highlight Quote -->
+                <div class="mt-8 pt-5 border-t border-white/10 w-full flex flex-col items-center">
+                    <div class="px-6 py-2.5 rounded-2xl bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-pink-500/20 border border-pink-400/40 text-pink-200 font-serif italic text-base md:text-lg tracking-wide shadow-inner">
+                        "Karena di mataku, kamu selalu dan selamanya jadi tipeku." ✨
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL (SALAH / BENAR) -->
+    <div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 transition-all">
+        <div class="relative flex flex-col items-center justify-center p-6 bg-slate-900/90 border border-white/20 rounded-3xl shadow-2xl max-w-sm sm:max-w-md w-full animate-modal text-center">
+            
+            <!-- Modal Image Container -->
+            <div class="w-60 h-60 sm:w-72 sm:h-72 rounded-2xl overflow-hidden flex items-center justify-center mb-5 bg-black/50 border border-white/10 shadow-lg">
+                <img id="modal-img" src="" alt="Popup Preview" class="w-full h-full object-contain">
+            </div>
+            
+            <!-- Salah State Content -->
+            <div id="wrong-content" class="hidden flex flex-col items-center">
+                <h3 class="text-xl font-bold text-rose-400 mb-1">Yah, Kodenya Salah! 😜</h3>
+                <p class="text-slate-300 text-sm mb-5 font-light">
+                    Masa lupa kodenya sih? Dilihatin tuh sama Mutia, coba tebak lagi yang bener!
+                </p>
+                <button onclick="closeModal()" class="px-7 py-2.5 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-full transition-all shadow-lg hover:shadow-rose-500/40 active:scale-95">
+                    Coba Kode Lain
+                </button>
+            </div>
+
+            <!-- Benar State Content -->
+            <div id="correct-content" class="hidden flex flex-col items-center">
+                <h3 class="text-2xl font-bold text-pink-300 font-serif mb-1">Yeay, Kodenya Benar! 💖</h3>
+                <p class="text-slate-200 text-sm mb-5 font-light">
+                    Cintanya udah nyampe! Menyiapkan lagu dan pesan manis untuk Mutia...
+                </p>
+                <div class="flex items-center gap-2 text-pink-300 text-xs font-semibold bg-pink-500/20 px-4 py-2 rounded-full border border-pink-400/30">
+                    <span class="animate-pulse">●</span> Masuk ke Beranda sekarang...
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const correctCode = '081026';
+        
+        const pageLogin = document.getElementById('page-login');
+        const pageHome = document.getElementById('page-home');
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const wrongContent = document.getElementById('wrong-content');
+        const correctContent = document.getElementById('correct-content');
+        const bgMusic = document.getElementById('bgMusic');
+        const musicToggleBtn = document.getElementById('musicToggleBtn');
+        const musicIcon = document.getElementById('musicIcon');
+        const musicText = document.getElementById('musicText');
+
+        function checkCode(selectedCode) {
+            modal.classList.remove('hidden');
+
+            if (selectedCode === correctCode) {
+                // Jawaban Benar
+                modalImg.src = '108cfcc6-ecb6-485a-ad8e-136488a79073.png';
+                wrongContent.classList.add('hidden');
+                correctContent.classList.remove('hidden');
+
+                // Putar musik Typeku
+                playMusic();
+
+                // Transisi ke halaman Beranda setelah 2.4 detik
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    pageLogin.classList.add('opacity-0', 'pointer-events-none');
+
+                    setTimeout(() => {
+                        pageLogin.classList.add('hidden');
+                        pageHome.classList.remove('hidden');
+                        initFloatingHearts();
+                    }, 650);
+                }, 2400);
+
+            } else {
+                // Jawaban Salah
+                modalImg.src = 'c224ef71-b458-42e2-9387-69b37635ba3d.png';
+                correctContent.classList.add('hidden');
+                wrongContent.classList.remove('hidden');
+            }
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        function playMusic() {
+            bgMusic.volume = 0.7;
+            const playPromise = bgMusic.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    updateMusicButton(true);
+                }).catch(err => {
+                    console.log("Autoplay dicegah browser, butuh interaksi:", err);
+                    updateMusicButton(false);
+                });
+            }
+        }
+
+        function toggleAudio() {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                updateMusicButton(true);
+            } else {
+                bgMusic.pause();
+                updateMusicButton(false);
+            }
+        }
+
+        function updateMusicButton(isPlaying) {
+            if (isPlaying) {
+                musicIcon.classList.add('animate-spin');
+                musicText.innerText = "Lagu: Berputar";
+                musicToggleBtn.classList.add('border-pink-400');
+            } else {
+                musicIcon.classList.remove('animate-spin');
+                musicText.innerText = "Lagu: Dijeda";
+                musicToggleBtn.classList.remove('border-pink-400');
+            }
+        }
+
+        // Floating Hearts Generator
+        function initFloatingHearts() {
+            const container = document.getElementById('particle-container');
+            const symbols = ['🌸', '✨', '🤍', '💖', '🌷', '🎀'];
+
+            setInterval(() => {
+                if (document.hidden) return;
+                const particle = document.createElement('div');
+                particle.className = 'heart-particle';
+                particle.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+                particle.style.left = Math.random() * 95 + '%';
+                particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                particle.style.fontSize = (Math.random() * 12 + 16) + 'px';
+
+                container.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 7000);
+            }, 550);
+        }
+    </script>
+</body>
+</html>
